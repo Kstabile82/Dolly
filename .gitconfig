@@ -5,3 +5,5 @@
 	email = karina.stabile@gmail.com
 [init]
 	defaultBranch = main
+[core]
+	editor = emacs

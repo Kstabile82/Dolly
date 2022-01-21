@@ -2,8 +2,16 @@ let inputObj = {
 }; 
 let inputArr = []; 
 let matchArr = []; 
+// let addNewRabbitBtn = document.createElement("button") 
+//    addNewRabbitBtn.innerHTML = "Add New Rabbit" 
+//    addNewRabbitBtn.style.display = "inline-block"
 
 document.addEventListener('DOMContentLoaded', () => {
+   //document.getElementById("rabbitfinder").appendChild(addNewRabbitBtn)
+   // addNewRabbitBtn.addEventListener("click", (e) => {
+   //    e.preventDefault();
+   //    addRabbit();
+   //   })
     getInput();
     document.addEventListener('submit', (e) => {
       e.preventDefault(); 
@@ -55,26 +63,26 @@ function getRabbits() {
 
 function returnMatches(rabbits) {
    let eyeMatch = rabbits.filter(function (rabbit) {
-      return rabbit.eyes === inputObj.eyes || rabbit.eyes.includes(inputObj.eyes)  
-   })    
-   let regionMatch = eyeMatch.filter(function(rabbit) {
+       return rabbit.eyes === inputObj.eyes || rabbit.eyes.includes(inputObj.eyes)  
+       })    
+   let regionMatch = eyeMatch.filter(function(rabbit) { 
       return rabbit.region === inputObj.region || rabbit.region.includes(inputObj.region)
-   })     
+      })     
    let earMatch = regionMatch.filter(function(rabbit) {
       return rabbit.ears === inputObj.ears || rabbit.ears.includes(inputObj.ears)
-   })
+      })
    let colorMatch = earMatch.filter(function(rabbit) {
       return rabbit.color === inputObj.color || rabbit.color.includes(inputObj.color)
-   })
+      })
    let coatMatch = colorMatch.filter(function(rabbit) {
-      return rabbit.coat === inputObj.coat || rabbit.coat.includes(inputObj.coat)
-   })
+      return rabbit.coat === inputObj.coat || rabbit.coat.includes(inputObj.coat)   
+      })
    let sizeMatch = coatMatch.filter(function(rabbit) {
       return rabbit.size === inputObj.size || rabbit.size.includes(inputObj.size)
-   })
+     })
    sizeMatch.filter(match => {
-     matchArr.push(match["species"])
-   })
+      matchArr.push(match["species"])
+   }) 
    renderRabbit(matchArr, rabbits)
 }   
 
@@ -91,7 +99,6 @@ function getInput() {
 }
 
 function renderRabbit(matchArr, rabbits) { 
-   // resetForm();
    let matchString = "We found multiple match possibilities: "; 
    let p = document.createElement("p");
    document.getElementById("rabbitmatches").appendChild(p);
@@ -161,6 +168,8 @@ function homePage() {
    document.getElementById("instructions").style.display = "block";
    document.getElementById("rescues").style.display = "none";
    document.getElementById("rabbitform").style.display="block" 
+   document.getElementById("resetbutton").style.display = "none";
+
 }
 
 function showWildButton(inputObj, rabbits) {
@@ -223,64 +232,34 @@ function showRescues() {
      iframe.height = "400";
      searchDiv.appendChild(iframe);
      iframe.src = "https://www.google.com/search?igu=1&q=rabbit+rescues+near+me&source=hp&ei=KcR-YbPlItW5qtsP78eA-AE&iflsig=ALs-wAMAAAAAYX7SOfU8JyStKUoVixiJMCcck3XlrAZg&oq=rabbit+rescues+near+me&gs_lcp=Cgdnd3Mtd2l6EAMyCAgAEIAEEMkDMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeOhQILhCABBCxAxCDARDHARCjAhCTAjoICAAQgAQQsQM6CAguEIAEELEDOgUIABCABDoLCC4QgAQQxwEQ0QM6DgguEIAEELEDEMcBENEDOgsILhCABBDHARCjAjoICAAQsQMQgwE6DgguEIAEEMcBENEDEJMCOg4ILhCABBCxAxDHARCjAjoOCC4QgAQQsQMQgwEQkwI6BQguELEDOgsILhCABBDHARCvAToLCC4QgAQQsQMQkwI6BQgAEJIDOgUILhCABDoFCAAQhgNQugxYzC9gujFoAnAAeACAAYEBiAGiD5IBBDE5LjWYAQCgAQGwAQA&sclient=gws-wiz&ved=0ahUKEwjznc3liPXzAhXVnGoFHe8jAB8Q4dUDCAo&uact=5&output=embed)"
-   // resetForm();
    }
 
-// function filterFunc(rabbits) {
-// //could also convert each rabbit to array using Object.entries(rabbit).slice() and slice off first 2 and last idx, and convert inputObj, and compare...loop through array, if idx 1 isArray, use the conditionals below
-// let match = false;
-// for (let info in inputObj) {
-//    let inputElement = inputObj[info]
-//    // console.log(inputElement)
-//    rabbits.map(rabbit => { 
-//       for (let key in rabbit) {
-//          let dataElement = rabbit[key];
-//          // console.log(dataElement)
-//          if (Array.isArray(dataElement) && dataElement.includes(inputElement)) {
-//             dataElement === inputElement;
-//             match = true
-//          }
-//          else if (dataElement === inputElement) {
-//             match = true; 
-//          }
-//          else {
-//             match = false; 
-//          }
+// function addRabbit() {
+//       let addForm = document.createElement("form") 
+//       let select = document.getElementsByTagName("h3"); 
+//       for (let i = 0; i < select.length; i++) {
+//          let input = document.createElement("input"); 
+//          input.placeholder=`${select[i].textContent}`
+//          input.name =`rabbit ${select[i].textContent}`
+//          create & append labels
+//          addForm.appendChild(input);
 //       }
-//    })
-// }
+//       document.getElementById("rabbitfinder").appendChild(addForm);
+//       addNewRabbitBtn.style.display = "none"
+   //submit event button, listener, renderNewRabbit function
+//}
+// function renderNewRabbit() {
+   //get input, create a new rabbit, POST request to add it to JSON ||
 
-// function matchesFirstLevel(rabbits, category) {
-//    let misMatchArr = []; 
-//    let matchRabbitArr = []; 
-//    if (category = "undefined") {
-//       let categoryArr = []; 
-//          for (let key in inputObj) {
-//             categoryArr.push(key) 
-//             categoryArr.filter(category => matchesNextLevel(category))
-//          }
-//    }
-//    else {
-//       matchesNextLevel(category)
-//    }
-//    function matchesNextLevel(category) {
-//    rabbits.filter(function (rabbit) {
-//       for (let key in rabbit) {
-//          if (category === key) {
-//             if (typeof rabbit[key] == "string" && inputObj[category] != rabbit[key]) {
-//               misMatchArr.push(rabbit["species"])
-//             }
-//             else if (typeof rabbit[key] == "object" && !Array.from(rabbit[key]).includes(inputObj[category])) {
-//                misMatchArr.push(rabbit["species"])
-//             }
-//          }
-//       }
-//       if (!misMatchArr.includes(rabbit["species"])) {
-//        matchRabbitArr.push(rabbit["species"]);
-//       }
-//     })   
-//    }
-//    let set = new Set(matchRabbitArr)
-//    matchArr = Array.from(set)
-//    renderRabbit(matchArr, rabbits)
+   //fetch PATCH request, add class of rabbit to each JSON rabbit 
+   //class rabbit {
+//   constructor(species, size, color, eyes, ears, region, coat) {
+//    this.species = species;
+//    this.size = size;
+//    this.color = color;
+//    this.ears = ears;
+//    this.region = region;
+//    this.eyes = eyes;
+//    this.coat = coat;
+//  }
 // }
