@@ -1,0 +1,95 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "karina",
+      "workouts": []
+    },
+    {
+      "id": 2,
+      "name": "dexter",
+      "workouts": [
+        "Leg Day"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Dolly",
+      "workouts": [
+        "Cardio Sculpt"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": 1,
+      "category": "Cardio",
+      "name": "Skaters",
+      "image": "https://cdn1.coachmag.co.uk/sites/coachmag/files/styles/insert_main_wide_image/public/2021/04/skater-jump-exercise-demonstration.jpg?itok=pwn1FZ3v",
+      "difficulty": "Intermediate",
+      "likes": 43
+    },
+    {
+      "id": 2,
+      "category": "Cardio",
+      "name": "Burpees",
+      "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
+      "difficulty": "Intermediate",
+      "likes": 3
+    },
+    {
+      "id": 3,
+      "category": "Lower Body",
+      "name": "Squats",
+      "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
+      "difficulty": "Intermediate",
+      "likes": 2
+    },
+    {
+      "id": 4,
+      "category": "Lower Body",
+      "name": "Stationary Lunges",
+      "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
+      "difficulty": "Intermediate",
+      "likes": 1
+    },
+    {
+      "id": 5,
+      "category": "Lower Body",
+      "name": "Lateral Lunges",
+      "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
+      "difficulty": "Intermediate",
+      "likes": 1
+    },
+    {
+      "id": 6,
+      "category": "Upper Body",
+      "name": "Bicep Curls",
+      "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
+      "difficulty": "Intermediate",
+      "likes": 1
+    },
+    {
+      "id": 7,
+      "category": "Upper Body",
+      "name": "Tricep Kickbacks",
+      "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
+      "difficulty": "Intermediate",
+      "likes": 1
+    },
+    {
+      "id": 8,
+      "category": "Core",
+      "name": "Crunches",
+      "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
+      "difficulty": "Intermediate",
+      "likes": 1
+    },
+    {
+      "category": "Upper Body",
+      "name": "Pushups",
+      "difficulty": "Intermediate",
+      "id": 9
+    }
+  ]
+}
