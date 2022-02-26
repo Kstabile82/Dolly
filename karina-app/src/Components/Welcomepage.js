@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import ExerciseContainer from "./ExerciseContainer";
 import RenderUserWorkouts from "./RenderUserWorkouts";
 import { useHistory } from "react-router-dom";
-// import { HashRouter } from "react-router-dom/cjs/react-router-dom.min";
 
 function Welcomepage({ user }) {
   let history = useHistory(); 

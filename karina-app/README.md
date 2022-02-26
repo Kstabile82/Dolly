@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+Get Fit!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](Preview.gif)  
 
-## Available Scripts
+Description
+A workout generator that can serve various purposes to help users create workouts
+and find out more about exercises that match their preferences. This is a working
+database that can be added to ongoingly with new exercises submitted by users. This is a React app that contains a JSON file of data. 
 
-In the project directory, you can run:
+Usage
+- A user should see a navigation bar upon opening the app in the browser, with Home, 
+Login and About tabs. These tabs should each be clickable and should change color when 
+being hovered over. 
+- The home tab should keep the user on the homepage, and bring them back to the homepage 
+if clicked elsewhere within the app. 
+- The login tab should populate two input forms; a "create new user" form and a "login" form.
+Users should be able to login with their existing username if they've already created one. If 
+they are new users, they should be able to enter a new username and have it posted to the database. If an erroneous username, or one that is already taken, is entered, error messages should pop up on screen to alert the user. 
+- The user, if logged in successfully, should see a welcome message with their name, along with 
+options to either create a new workout or view their saved workouts. 
+- The "create a new workout" button should pull up two select forms with drop downs offering 
+exercise categories and difficulty levels. When the forms are completed and the submit button is clicked, all exercises from the database that match the input should appear on screen as buttons. If the "sort by likes" checkbox is checked, the list should show the exercises in order of most to fewest "likes." The user should be able to click each exercise to have it add to their workout list below.
+- The workout list should show added exercises with x buttons next to them that delete them from the list when clicked. After at least one exercise is added to the list, a "save workout" form should appear with input for a name and a submit button. Clicking the button should post the exercise to that user's workouts array, which contains each saved workout as an object. 
+- Another element that should appear when the "create new workout" button is clicked is an "add an exercise" form. A user should be able to submit a new exercise by filling in the name, category and difficulty level, and then that exercise gets posted to the database. 
+- If a user clicks the "see my workouts" button instead of the "create new workout" button, it shoudl populate lists of their stored workouts on screen. Each exercise in the lists should be clickable, and a "card" should come up showing the exercise name, difficulty, category and number of likes. The card should disappear if the user clicks the close button. 
+- If any forms are submitted incomplete, an error message should pop up on screen alerting the user that they didn't complete the fields and to try again.
 
-### `npm start`
+Support
+For support, please email karina.stabile@gmail.com
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Roadmap
+- Add option to set time/number of reps next to each exercise on the workout list
+- Include capability to have an exercise repeat on the list
+- Include capability to drag and drop exercises on the list to easily change the order
+- Authenticate login and create password-protected userability
+- Update exercise cards to include images -- also update Add an Exercise form to offer link for image
+- Offer option to randomize the order of the workout list
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributing
+I am open to contributions, please email me to inquire. Any editors must have React and JSON enabled. 

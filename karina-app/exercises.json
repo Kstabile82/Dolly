@@ -245,91 +245,6 @@
         }
       ],
       "id": 103
-    },
-    {
-      "name": "Kar",
-      "workouts": [],
-      "id": 104
-    },
-    {
-      "name": "kari",
-      "workouts": [],
-      "id": 105
-    },
-    {
-      "name": "karin",
-      "workouts": [],
-      "id": 106
-    },
-    {
-      "name": "karina123",
-      "workouts": [],
-      "id": 107
-    },
-    {
-      "name": "karina1234",
-      "workouts": [],
-      "id": 108
-    },
-    {
-      "name": "newuser123",
-      "workouts": [],
-      "id": 109
-    },
-    {
-      "name": "jane",
-      "workouts": [],
-      "id": 110
-    },
-    {
-      "name": "Alex",
-      "workouts": [],
-      "id": 111
-    },
-    {
-      "name": "karina12356",
-      "workouts": [],
-      "id": 112
-    },
-    {
-      "name": "NewUser",
-      "workouts": [],
-      "id": 113
-    },
-    {
-      "name": "karina1223",
-      "workouts": [],
-      "id": 114
-    },
-    {
-      "name": "karina211",
-      "workouts": [],
-      "id": 115
-    },
-    {
-      "name": "1234",
-      "workouts": [],
-      "id": 116
-    },
-    {
-      "name": "abcdef",
-      "workouts": [],
-      "id": 117
-    },
-    {
-      "name": "abcd",
-      "workouts": [],
-      "id": 118
-    },
-    {
-      "name": "Finnegan",
-      "workouts": [],
-      "id": 119
-    },
-    {
-      "name": "Maggie",
-      "workouts": [],
-      "id": 120
     }
   ],
   "exercises": [
@@ -611,7 +526,7 @@
       "name": "Standing crunch",
       "difficulty": "beginner",
       "category": "core",
-      "likes": 0,
+      "likes": 2,
       "id": 42
     },
     {
@@ -641,20 +556,6 @@
       "category": "core",
       "likes": 0,
       "id": 46
-    },
-    {
-      "name": "New",
-      "difficulty": "beginner",
-      "category": "core",
-      "likes": 0,
-      "id": 47
-    },
-    {
-      "name": "New2",
-      "difficulty": "advanced",
-      "category": "upper body",
-      "likes": 0,
-      "id": 48
     }
   ]
 }

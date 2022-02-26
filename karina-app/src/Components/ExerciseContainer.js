@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"; 
 import ExerciseForm from "./ExerciseForm";
-// import AddNewExercise from "./AddNewExercise";
-// import SearchExercises from "./SearchExercises";
+import AddNewExercise from "./AddNewExercise";
 import MyWorkoutList from "./MyWorkoutList";
 import Card from "./Card";
 import Dashboard from "./Dashboard"
@@ -41,12 +40,22 @@ function ExerciseContainer({ user }) {
             matches.sort((a,b) => (a.id > b.id) ? 1 : -1)
         }
     }
-    //need addexercise onsubmit to trigger re-render of matches 
+    function postNewExercise(newEx) {
+        console.log(newEx)
+        fetch ("http://localhost:3000/exercises", {
+            method: "POST",
+            headers: {
+            "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newEx)
+            })
+        .then((r) => r.json())
+        .then(exercise => setExercises([...exercises, exercise], setMatches([...exercises, exercise])))
+    }
     return (
         <div className="container">
             <br></br>
             Choose the exercise category and difficulty level you'd like to see, then add exercises to the "My Workout" list as desired. To delete an exercise from your workout list, click the "X" that appears once it's been added. Feel free to add a new exercise to our database, too! 
-            {/* <SearchExercises user={user} exercises={exercises}  /> */}
             <ExerciseForm 
             exercises={exercises} 
             matches={matches}
@@ -76,7 +85,7 @@ function ExerciseContainer({ user }) {
                )
                })} </ul> : null } </div>  
                <MyWorkoutList addedExercises={addedExercises} user={user} exercises={exercises} setAddedExercises={setAddedExercises} />
-            {/* <AddNewExercise exercises={exercises} setExercises={setExercises} setMatches={setMatches} matches={matches}/>  */}
+            <AddNewExercise exercises={exercises} setExercises={setExercises} setMatches={setMatches} postNewExercise={postNewExercise} matches={matches}/> 
         </div>
     );
 }
