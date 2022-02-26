@@ -43,11 +43,9 @@ function ExerciseContainer({ user }) {
     }
     //need addexercise onsubmit to trigger re-render of matches 
     return (
-        
-        <div>
+        <div className="container">
             <br></br>
             Choose the exercise category and difficulty level you'd like to see, then add exercises to the "My Workout" list as desired. To delete an exercise from your workout list, click the "X" that appears once it's been added. Feel free to add a new exercise to our database, too! 
-
             {/* <SearchExercises user={user} exercises={exercises}  /> */}
             <ExerciseForm 
             exercises={exercises} 

@@ -9,7 +9,6 @@ body {
 }
 
 .pic {
-  position: absolute;
   text-align: center;
 
 }
@@ -18,7 +17,6 @@ body {
   background-color: rgb(194, 31, 153);
   overflow: hidden;
   justify-content: center;
-  position: relative;
 
 }
 .Home {
@@ -115,11 +113,15 @@ ul {
   top: 25em;
   margin-left: 40em;
 }
+.container {
+  position: relative;
+  margin: auto;
+  justify-content: center;
+}
 .seeallexercises {
   text-align: center;
   column-count: 4;
   position: relative;
-  top: 6em;
   justify-content: center;
   margin: auto;
 }

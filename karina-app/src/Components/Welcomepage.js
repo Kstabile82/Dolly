@@ -31,7 +31,7 @@ return (
                     <button id="seeworkouts" name="nextsteps" style={{display: user.workouts.length !== 0 ? 'visible' : 'none' }} onClick={handleNext}>See My Workout List</button>
                     <button id="logout" name="logout" onClick={handleNext}>Log Out</button>
                 </form>
-                 <div >{(nextStep) === "createnew" ? <ExerciseContainer user={user} /> : null } </div>
+                 {(nextStep) === "createnew" ? <ExerciseContainer user={user} /> : null } 
                 <br></br>
                 <div >{(nextStep) === "seeworkouts" ? <RenderUserWorkouts user={user} /> : null }</div>
       </div>
