@@ -7,7 +7,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 .pic {
   text-align: center;
 
@@ -62,8 +61,8 @@ body {
 .hello {
   color: rgb(0, 0, 0);
   text-align: center; 
-  position: relative;
   margin: auto;
+  padding: 1em;
   justify-content: center;
   /* margin-left: 12em; */
   top: 11em;
@@ -94,9 +93,9 @@ ul {
 }
 .welcomeform {
   text-align: center;
-  position: relative;
   top: 25em;
   justify-content: center;
+  padding: 1em;
   margin: auto;
 }
 .Login:hover {
